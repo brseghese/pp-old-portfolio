@@ -1,0 +1,75 @@
+.bg-intro {
+  background: url("../assets/background.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.introducao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  z-index: -2;
+}
+
+.introducao h1 {
+  font-size: 2rem;
+  line-height: 1.125;
+  position: relative;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.introducao h2 {
+  font-size: 4rem;
+  line-height: 1.125;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.introducao p {
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2rem;
+}
+
+@media (max-width: 800px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao h1 {
+    font-size: 1.5rem;
+  }
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+  .introducao h2 {
+    font-size: 3rem;
+  }
+  .introducao p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  .introducao img {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao h1 {
+    font-size: 1rem;
+  }
+  .introducao h2 {
+    font-size: 2rem;
+  }
+  .introducao p {
+    font-size: 0.5rem;
+  }
+}

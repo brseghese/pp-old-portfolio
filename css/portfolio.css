@@ -1,0 +1,84 @@
+.bg-portfolio {
+  background: #000;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  gap: 40px;
+  position: relative;
+  display: grid;
+}
+
+.portfolio-container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../assets/detalhe.svg") no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+
+.portfolio-container .subtitulo {
+  color: #b629f8;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+.projetos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 40px;
+}
+
+.projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background: #111;
+  border-radius: 4px;
+  position: relative;
+}
+
+.projeto::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b629f8, #800add);
+  position: absolute;
+  top: 20px;
+  left: -4px;
+}
+
+.projeto .button {
+  border-radius: 4px;
+  background: #800add;
+  padding: 5px 10px;
+  color: #fff;
+  transition: 0.3s;
+  border: 1px solid #800add;
+}
+
+.button:hover {
+  background: #800add;
+  color: #111;
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .portfolio-container {
+    padding: 0 20px;
+    padding-top: 60px;
+    padding-bottom: 160px;
+    gap: 40px;
+  }
+  .projetos {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
